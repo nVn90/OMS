@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    
+    <title>OnlineMobileStore</title>
+    <script src="Scripts/jquery-1.10.2.js" type="text/javascript"></script>
+    <script src="Scripts/jquery-ui.min.js" type="text/javascript"></script>
+    <link href="Styles/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//code.jquery.com/jquery-1.12.3.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js" type="text/javascript"></script>
+
+
+<link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="Stylesheet"  type="text/css" />
+<link href="https://cdn.datatables.net/1.10.12/js/dataTables.uikit.min.js" rel="Stylesheet"  type="text/css" />
+
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css" type="text/css" />
+  <link rel="stylesheet" href="/resources/demos/style.css" type="text/css" />
+  <script src="https://code.jquery.com/jquery-1.12.4.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" type="text/javascript"></script>
+   <link rel="stylesheet" type="text/css" href="../../themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../demo.css" />
+    <script type="text/javascript" src="../../jquery.min.js"></script>
+    <script type="text/javascript" src="../../jquery.easyui.min.js"></script>
+    
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+    <style type="text/css">
+        #form1 {
+            height: 522px;
+        }
+    </style>
+</head><body>
+    <form id="form1" runat="server">
+        
+    <div class="header" width="1024px" align="center">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+    </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+            <ContentTemplate>
+<asp:Image ID="imgphone" runat="server" Height="350px" Width="100%" />
+                 <asp:Timer ID="Timer1" runat="server" OnTick="Timer1_Tick" Interval="1000">
+        </asp:Timer>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        
+    </div>
+    <div class="menu">
+        <div align="center" style="width: 1119px; height: 33px;">
+            <asp:LinkButton ID="lbtnhome" runat="server" OnClick="LinkButton1_Click" cssclass="hovering">Home</asp:LinkButton>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<asp:LinkButton ID="lbtnclogin" runat="server" OnClick="LinkButton3_Click" class="hovering">Customer Login</asp:LinkButton>
+            &nbsp;&nbsp;
+            &nbsp;&nbsp;<asp:linkbutton ID="lbtnproduct" runat="server" OnClick="LinkButton5_Click" class="hovering">Products</asp:linkbutton>
+            &nbsp;&nbsp; &nbsp;
+            <asp:linkbutton ID="lbtncart" runat="server" OnClick="LinkButton6_Click" class="hovering">Cart</asp:linkbutton>
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:LinkButton ID="lbtnsearch" runat="server" OnClick="lbtnsearch_Click"  class="hovering">Search</asp:LinkButton>
+            <asp:linkbutton ID="lbtnContactus" runat="server" OnClick="LinkButton7_Click" class="hovering">Contact Us</asp:linkbutton>
+    &nbsp;&nbsp;
+            <asp:linkbutton ID="lbtnlogout" runat="server" class="hovering" OnClick="lbtnlogout_Click">Logout</asp:linkbutton>
+            <asp:linkbutton ID="lbtncustomer" runat="server" class="hovering"></asp:linkbutton>
+    </div>
+    </div>
+    <div class="content">
+         <asp:ContentPlaceHolder id="content" runat="server">
+             </asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <br />
+    <div class="footer">
+        links<br />
+        <asp:HyperLink ID="homelink" runat="server" NavigateUrl="~/Home.aspx">Home</asp:HyperLink>
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <br />
+        
+        <asp:HyperLink ID="contactuslink" runat="server" Navigateurl="~/contactus.aspx">contact us</asp:HyperLink>
+
+        
+    </div>
+       
+    </form>
+
+       </body>
+</html>

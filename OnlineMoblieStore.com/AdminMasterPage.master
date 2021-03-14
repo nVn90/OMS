@@ -1,0 +1,41 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="AdminMasterPage.master.cs" Inherits="AdminMasterPage2" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>OnlineMobileStore</title>
+  <link href="StyleSheet.css" rel="stylesheet" />
+    <style type="text/css">
+        #form1 {
+            height: 522px;
+        }
+    </style>
+    <asp:ContentPlaceHolder id="head" runat="server">
+             </asp:ContentPlaceHolder>
+</head><body>
+    <form id="form1" runat="server">
+    <div class="header" width="1024px" align="center">
+        <asp:Image ID="Image1" runat="server" Height="350px" Width="1123px" ImageUrl="ImgSrc/Image.jpg" />
+    </div>
+    <div class="menu">
+        <div align="center" style="width: 1119px">
+            <asp:LinkButton ID="lbtnhome" runat="server"  cssclass="hovering" OnClick="lbtnhome_Click">Home</asp:LinkButton>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:linkbutton ID="lbtnaddproducts" runat="server" cssclass="hovering" OnClick="lbtnaddproducts_Click">Add Products</asp:linkbutton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:linkbutton ID="lbtnlogout" runat="server" cssclass="hovering" OnClick="lbtnlogout_Click">Logout</asp:linkbutton>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+    </div>
+    <div class="content">
+         <asp:ContentPlaceHolder id="content" runat="server">
+             </asp:ContentPlaceHolder>
+    </div>
+    <br />
+    <br />
+    <div class="footer">
+        @onlinemobilestore.com</div>
+    </form>
+
+       </body>
+</html>

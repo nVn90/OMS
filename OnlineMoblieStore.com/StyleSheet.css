@@ -1,0 +1,37 @@
+﻿.header 
+{
+    width:auto;
+}
+.menu
+{    
+    width:auto;
+    background-color: #000000;
+}
+.content
+{
+    width:auto;
+    background-color:snow;
+
+}
+.footer
+{    
+    width:auto;
+    background-color:black;
+    text-align:left;
+}
+.hovering
+{
+transition:0.4s;
+color:white;
+font-size:20px;
+text-decoration:none;
+padding:0 10px;
+margin:0 10px;
+    background-color: #000000;
+}
+.hovering:hover
+{
+background-color:#ffd800;
+color:black;
+padding:7px 10px;
+}
